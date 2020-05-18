@@ -22,7 +22,7 @@ class InventoryEnv(gym.Env, utils.EzPickle):
         self.action_space = spaces.Discrete(n) # the number of items ordered in the evening of day t
         self.observation_space = spaces.Discrete(n) # the inventory size
         self.max = n
-        self.state = n
+        self.state = 0 # 최초 보유 재고량
         self.k = k # a fixed entry cost k of ordering nonzero items
         self.c = c # a fixed cost c
         self.h = h # a cost of holding an inventory of size x > 0
