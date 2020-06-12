@@ -77,5 +77,5 @@ class InventoryEnv(gym.Env, utils.EzPickle):
         return obs2, reward, done, demand
 
     def reset(self):
-        self.state = self.action_space.sample()
+        self.state = self.observation_space.sample()
         return self.state
